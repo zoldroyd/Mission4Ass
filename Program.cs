@@ -59,6 +59,10 @@ while (winner == false)
     
     // check if someone won by calling method
     winner = sp.checkWinner();
+    if (winner == true)
+    {
+        break;
+    }
     
     // ask player 2 where to play
     Console.WriteLine("Player 2 please pick a row");
@@ -80,10 +84,10 @@ while (winner == false)
     //print out board with player 2 choice
     boardArray[(row2 - 1), (col2 - 1)] = 'O';
 
+    Console.WriteLine("Next round");
+    
     // check if someone won by calling method
     winner = sp.checkWinner();
-    
-    Console.WriteLine("Next round");
 
     sp.round++;
 }
