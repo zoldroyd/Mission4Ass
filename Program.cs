@@ -74,12 +74,13 @@ while (winner == false)
     
     //print out board with player 2 choice
     boardArray[(row2 - 1), (col2 - 1)] = 'O';
-    sp.printBoard();
 
     // check if someone won by calling method
     winner = sp.checkWinner();
 
     sp.round++;
+    
+    Console.WriteLine("Next round");
 }
 
 Console.WriteLine("Game Over! Somebody has won!");
