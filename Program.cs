@@ -54,6 +54,11 @@ while (winner == false)
     // print out board with player 1 choice
     boardArray[(row1 - 1), (col1 - 1)] = 'X';
     sp.printBoard();
+
+    sp.round++;
+    
+    // check if someone won by calling method
+    winner = sp.checkWinner();
     
     // ask player 2 where to play
     Console.WriteLine("Player 2 please pick a row");
@@ -77,10 +82,10 @@ while (winner == false)
 
     // check if someone won by calling method
     winner = sp.checkWinner();
-
-    sp.round++;
     
     Console.WriteLine("Next round");
+
+    sp.round++;
 }
 
 Console.WriteLine("Game Over! Somebody has won!");
@@ -92,7 +97,6 @@ if (sp.whoWin == 0)
 }
 else
 {
-    Console.WriteLine("Game Over! Somebody has won!");
     Console.WriteLine("Congrats Player " + sp.whoWin + " you won the game!");
 }
 
