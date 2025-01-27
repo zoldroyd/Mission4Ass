@@ -28,12 +28,28 @@ while (winner == false)
     // print out the current game board
     sp.printBoard();
     
+    // create our row and column variables
+    int row1;
+    int col1;
+    int row2;
+    int col2;
+    
     // ask player 1 where to play
     Console.WriteLine("Player 1 please pick a row");
-    int row1 = Convert.ToInt32(Console.ReadLine());
+
+    // ensure player gave a valid input
+    while (!int.TryParse(Console.ReadLine(), out row1) || row1 < 1 || row1 > 3)
+    {
+        Console.WriteLine("Please enter a valid number 1-3: ");
+    }
     
     Console.WriteLine("Player 1 please pick a column");
-    int col1 = Convert.ToInt32(Console.ReadLine());
+    
+    // ensure player gave a valid input
+    while (!int.TryParse(Console.ReadLine(), out col1) || col1 < 1 || col1 > 3)
+    {
+        Console.WriteLine("Please enter a valid number 1-3: ");
+    }
     
     // print out board with player 1 choice
     boardArray[(row1 - 1), (col1 - 1)] = 'X';
@@ -41,10 +57,20 @@ while (winner == false)
     
     // ask player 2 where to play
     Console.WriteLine("Player 2 please pick a row");
-    int row2 = Convert.ToInt32(Console.ReadLine());
+    
+    // ensure player gave a valid input
+    while (!int.TryParse(Console.ReadLine(), out row2) || row2 < 1 || row2 > 3)
+    {
+        Console.WriteLine("Please enter a valid number 1-3: ");
+    }
     
     Console.WriteLine("Player 2 please pick a column");
-    int col2 = Convert.ToInt32(Console.ReadLine());
+    
+    // ensure player gave a valid input
+    while (!int.TryParse(Console.ReadLine(), out col2) || col2 < 1 || col2 > 3)
+    {
+        Console.WriteLine("Please enter a valid number 1-3: ");
+    }
     
     //print out board with player 2 choice
     boardArray[(row2 - 1), (col2 - 1)] = 'O';
@@ -52,12 +78,22 @@ while (winner == false)
 
     // check if someone won by calling method
     winner = sp.checkWinner();
+
+    sp.round++;
 }
 
-// inform players that game is over and who won
 Console.WriteLine("Game Over! Somebody has won!");
-Console.WriteLine("Congrats Player " + sp.whoWin + " you won the game!");
 
+// notify the players who won
+if (sp.whoWin == 0)
+{
+    Console.WriteLine("Awh man, it's a draw. The CAT won");
+}
+else
+{
+    Console.WriteLine("Game Over! Somebody has won!");
+    Console.WriteLine("Congrats Player " + sp.whoWin + " you won the game!");
+}
 
 
 
