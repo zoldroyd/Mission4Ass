@@ -1,4 +1,5 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿// Group 2-2 Olivia Fowler, Anna Miyoshi, Christian Taylor, Zac Oldroyd
+
 using Mission4Ass;
  
 Console.WriteLine("Welcome to the tic-tac-toe game!");
