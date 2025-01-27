@@ -55,6 +55,23 @@ while (winner == false)
     {
         Console.WriteLine("Please enter a valid number 1-3: ");
     }
+
+    // ensure player chooses empty space
+    while (true)
+    {
+        if (boardArray[(row1 - 1), (col1 - 1)] != ' ')
+        {
+            Console.WriteLine("Space already taken, please try again: ");
+            Console.WriteLine("Player 1 please pick a row");
+            row1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Player 1 please pick a column");
+            col1 = int.Parse(Console.ReadLine());
+        }
+        else
+        {
+            break;
+        }
+    }
     
     // print out board with player 1 choice
     boardArray[(row1 - 1), (col1 - 1)] = 'X';
@@ -84,6 +101,22 @@ while (winner == false)
     while (!int.TryParse(Console.ReadLine(), out col2) || col2 < 1 || col2 > 3)
     {
         Console.WriteLine("Please enter a valid number 1-3: ");
+    }
+    
+    while (true)
+    {
+        if (boardArray[(row2 - 1), (col2 - 1)] != ' ')
+        {
+            Console.WriteLine("Space already taken, please try again: ");
+            Console.WriteLine("Player 2 please pick a row");
+            row2 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Player 2 please pick a column");
+            col2 = int.Parse(Console.ReadLine());
+        }
+        else
+        {
+            break;
+        }
     }
     
     //print out board with player 2 choice
