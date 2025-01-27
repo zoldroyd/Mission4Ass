@@ -28,7 +28,7 @@ public class Support
         bool winner = false;
 
         // If nobody wins
-        if (round > 9)
+        if (round > 8)
         {
             winner = true;
             whoWin = 0;
