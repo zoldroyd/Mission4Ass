@@ -15,12 +15,11 @@ public class Support
     // Display Board
     public void printBoard()
     {
-        Console.WriteLine($"  {BoardArray[0, 0]}  |  {BoardArray[0, 1]}  |  {BoardArray[0, 2]}  ");
+        Console.WriteLine($"  {BoardArray[0, 0]} |  {BoardArray[0, 1]} |  {BoardArray[0, 2]}  ");
         Console.WriteLine("____|____|____");
-        Console.WriteLine($"  {BoardArray[1, 0]}  |  {BoardArray[1, 1]}  |  {BoardArray[1, 2]}  ");
+        Console.WriteLine($"  {BoardArray[1, 0]} |  {BoardArray[1, 1]} |  {BoardArray[1, 2]}  ");
         Console.WriteLine("____|____|____");
-        Console.WriteLine($"  {BoardArray[2, 0]}  |  {BoardArray[2, 1]}  |  {BoardArray[2, 2]}  ");
-        Console.WriteLine("     |     |     ");
+        Console.WriteLine($"  {BoardArray[2, 0]} |  {BoardArray[2, 1]} |  {BoardArray[2, 2]}  ");
     }
 
     // See who wins
