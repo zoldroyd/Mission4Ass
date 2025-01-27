@@ -26,8 +26,6 @@ Console.WriteLine("For example, to place an X/O in the middle you would input ro
 
 while (winner == false)
 {
-    // print out the current game board
-    sp.printBoard();
     
     // create our row and column variables
     int row1;
@@ -39,6 +37,9 @@ while (winner == false)
     {
         Console.WriteLine("Next round");
     }
+    
+    // print out the current game board
+    sp.printBoard();
     
     // ask player 1 where to play
     Console.WriteLine("Player 1 please pick a row");
@@ -122,6 +123,7 @@ while (winner == false)
     
     //print out board with player 2 choice
     boardArray[(row2 - 1), (col2 - 1)] = 'O';
+    sp.printBoard();
     
     // check if someone won by calling method
     winner = sp.checkWinner();
@@ -134,7 +136,7 @@ Console.WriteLine("Game Over! Somebody has won!");
 // notify the players who won
 if (sp.whoWin == 0)
 {
-    Console.WriteLine("Awh man, it's a draw. The CAT won");
+    Console.WriteLine("Awh man, it's a draw. The CAT won.");
 }
 else
 {

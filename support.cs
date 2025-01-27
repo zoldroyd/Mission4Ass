@@ -101,8 +101,7 @@ public class Support
             whoWin = 2;
 
         }
-        if (BoardArray[2, 0] == 'O' && BoardArray[1, 1] == ')' && BoardArray[0, 2] == 'O')
-
+        if (BoardArray[2, 0] == 'O' && BoardArray[1, 1] == 'O' && BoardArray[0, 2] == 'O')
         {
             winner = true;
             whoWin = 2;
