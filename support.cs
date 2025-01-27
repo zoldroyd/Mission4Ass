@@ -4,9 +4,9 @@ public class Support
 {
     public Support()
         {
-            
+        char[,] boardArray = new char[3, 3];
         }
-    public void printBoard(Char[,] boardArray)
+    public void printBoard(char[,] boardArray)
     {
         Console.WriteLine("     |     |     ");
         Console.WriteLine($"  {boardArray[0, 0]}  |  {boardArray[0, 1]}  |  {boardArray[0, 2]}  ");
