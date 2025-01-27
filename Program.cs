@@ -33,6 +33,11 @@ while (winner == false)
     int col1;
     int row2;
     int col2;
+
+    if (sp.round > 1)
+    {
+        Console.WriteLine("Next round");
+    }
     
     // ask player 1 where to play
     Console.WriteLine("Player 1 please pick a row");
@@ -83,8 +88,6 @@ while (winner == false)
     
     //print out board with player 2 choice
     boardArray[(row2 - 1), (col2 - 1)] = 'O';
-
-    Console.WriteLine("Next round");
     
     // check if someone won by calling method
     winner = sp.checkWinner();
